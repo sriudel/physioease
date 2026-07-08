@@ -1,65 +1,63 @@
-import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
+import ServiceCard from "@/components/ServiceCard";
+import TestimonialCard from "@/components/TestimonialCard";
+import BlogCard from "@/components/BlogCard";
+import { services } from "@/data/services";
+import { testimonials } from "@/data/testimonials";
+import { blogPosts } from "@/data/blog";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="flex items-end justify-between">
+          <h2 className="text-3xl font-extrabold text-slate-900">Our Services</h2>
+          <Link href="/services" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+            Explore services
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard key={service.slug} service={service} />
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <HowItWorks />
+
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="flex items-end justify-between">
+          <h2 className="text-3xl font-extrabold text-slate-900">What Our Patients Say</h2>
+          <Link href="/testimonials" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+            Read more
+          </Link>
+        </div>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {testimonials.map((t) => (
+            <TestimonialCard key={t.name} testimonial={t} />
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex items-end justify-between">
+            <h2 className="text-3xl font-extrabold text-slate-900">Blog</h2>
+            <Link href="/blog" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+              Explore blog
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {blogPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
