@@ -1,10 +1,30 @@
+export type ProcessStep = {
+  title: string;
+  duration?: string;
+  description: string;
+};
+
+export type ProgramPhase = {
+  name: string;
+  title: string;
+  duration: string;
+  goals: string[];
+  focusAreas: string[];
+  outcomes: string[];
+};
+
 export type Service = {
   slug: string;
   name: string;
   shortDescription: string;
   description: string;
   bullets: string[];
+  bulletsLabel?: string;
   icon: string;
+  process?: ProcessStep[];
+  processLabel?: string;
+  phases?: ProgramPhase[];
+  benefits?: string[];
 };
 
 export type TeamMember = {

@@ -49,11 +49,37 @@ export default async function ServiceDetailPage({
 
       <p className="mt-6 text-lg text-slate-600">{service.description}</p>
 
+      {service.process && (
+        <div className="mt-8">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+            {service.processLabel ?? "How it works"}
+          </h2>
+          <div className="mt-4 space-y-4">
+            {service.process.map((step, i) => (
+              <div key={step.title} className="flex gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white">
+                  {i + 1}
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-baseline gap-2">
+                    <h3 className="font-semibold text-slate-900">{step.title}</h3>
+                    {step.duration && (
+                      <span className="text-xs font-medium text-teal-700">{step.duration}</span>
+                    )}
+                  </div>
+                  <p className="mt-1 text-sm text-slate-500">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="mt-8 rounded-2xl border border-slate-100 bg-slate-50 p-6">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          What this program covers
+          {service.bulletsLabel ?? "What this program covers"}
         </h2>
-        <ul className="mt-4 space-y-3">
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {service.bullets.map((b) => (
             <li key={b} className="flex items-start gap-2 text-sm text-slate-700">
               <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-600" />
@@ -62,6 +88,70 @@ export default async function ServiceDetailPage({
           ))}
         </ul>
       </div>
+
+      {service.phases && (
+        <div className="mt-8">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+            Your recovery journey
+          </h2>
+          <div className="mt-4 space-y-6">
+            {service.phases.map((phase) => (
+              <div key={phase.name} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                    {phase.name}
+                  </span>
+                  <span className="text-xs font-medium text-slate-400">{phase.duration}</span>
+                </div>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">{phase.title}</h3>
+
+                <div className="mt-4 grid gap-6 sm:grid-cols-3">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Goals</p>
+                    <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                      {phase.goals.map((g) => (
+                        <li key={g}>{g}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Focus areas</p>
+                    <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                      {phase.focusAreas.map((f) => (
+                        <li key={f}>{f}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Expected outcomes</p>
+                    <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                      {phase.outcomes.map((o) => (
+                        <li key={o}>{o}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {service.benefits && (
+        <div className="mt-8 rounded-2xl bg-teal-50 p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-teal-700">
+            Benefits
+          </h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {service.benefits.map((b) => (
+              <li key={b} className="flex items-start gap-2 text-sm text-slate-700">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-600" />
+                {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <BookServiceButton
         serviceSlug={service.slug}
