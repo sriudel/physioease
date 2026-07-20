@@ -7,7 +7,8 @@ export const team: TeamMember[] = [
     title: "Co-Founder, Registered Physiotherapist",
     credentials: "PT, MKin (Neuromuscular Physiology), Registered with the College of Physiotherapists of Ontario",
     bio: "Ravneet co-founded PhysioEase, bringing a background in neuromuscular physiology and a clinical focus on musculoskeletal, vestibular, and neurological rehabilitation. His work is grounded in pain science, supporting patients recovering from concussion, whiplash, and complex musculoskeletal and neurological conditions.",
-    photo: "/images/team-ravneet.svg",
+    photo: "/images/team-ravneet.jpeg",
+    photoPosition: "center 20%",
     specialties: ["Musculoskeletal Rehabilitation", "Neurological Rehabilitation"],
   },
   {

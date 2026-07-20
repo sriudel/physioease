@@ -34,6 +34,7 @@ export type TeamMember = {
   credentials: string;
   bio: string;
   photo: string;
+  photoPosition?: string;
   specialties: string[];
 };
 

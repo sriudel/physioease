@@ -11,6 +11,7 @@ export default function TeamCard({ member }: { member: TeamMember }) {
           fill
           sizes="(min-width: 640px) 50vw, 100vw"
           className="object-cover"
+          style={{ objectPosition: member.photoPosition ?? "center" }}
         />
       </div>
       <div className="p-6">
