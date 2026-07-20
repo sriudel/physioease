@@ -2,13 +2,13 @@ import { TeamMember } from "@/lib/types";
 
 export const team: TeamMember[] = [
   {
-    slug: "erin-whitfield",
-    name: "Erin Whitfield",
-    title: "Lead Physiotherapist, Founder",
-    credentials: "PT, MScPT, Registered with the College of Physiotherapists",
-    bio: "Erin founded PhysioEase after ten years of clinical practice, wanting to make quality physiotherapy accessible to people who can't easily get to a clinic. She designed our virtual musculoskeletal program and leads our comprehensive assessments.",
-    photo: "/images/team-erin.svg",
-    specialties: ["Virtual Musculoskeletal Physiotherapy Program", "Musculoskeletal Rehabilitation"],
+    slug: "ravneet-singh",
+    name: "Ravneet Singh",
+    title: "Co-Founder, Registered Physiotherapist",
+    credentials: "PT, MKin (Neuromuscular Physiology), Registered with the College of Physiotherapists of Ontario",
+    bio: "Ravneet co-founded PhysioEase, bringing a background in neuromuscular physiology and a clinical focus on musculoskeletal, vestibular, and neurological rehabilitation. His work is grounded in pain science, supporting patients recovering from concussion, whiplash, and complex musculoskeletal and neurological conditions.",
+    photo: "/images/team-ravneet.svg",
+    specialties: ["Musculoskeletal Rehabilitation", "Neurological Rehabilitation"],
   },
   {
     slug: "daniel-oduya",
