@@ -21,6 +21,8 @@ export type Service = {
   bullets: string[];
   bulletsLabel?: string;
   icon: string;
+  image: string;
+  imagePosition?: string;
   process?: ProcessStep[];
   processLabel?: string;
   phases?: ProgramPhase[];

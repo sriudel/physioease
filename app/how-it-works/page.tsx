@@ -30,7 +30,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <section className="mx-auto max-w-4xl px-4 pt-16 text-center sm:px-6">
-        <h1 className="text-4xl font-extrabold text-slate-900">How It Works</h1>
+        <h1 className="text-4xl font-extrabold text-brand-plum">How It Works</h1>
         <p className="mt-3 text-slate-500">
           A simple, three-step path from your first consultation to a full recovery plan.
         </p>
@@ -39,11 +39,11 @@ export default function HowItWorksPage() {
       <HowItWorks />
 
       <section id="faq" className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
-        <h2 className="text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-extrabold text-brand-plum">Frequently Asked Questions</h2>
         <div className="mt-8 space-y-6">
           {faqs.map((faq) => (
             <div key={faq.q} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-              <h3 className="font-semibold text-slate-900">{faq.q}</h3>
+              <h3 className="font-semibold text-brand-plum">{faq.q}</h3>
               <p className="mt-2 text-sm text-slate-500">{faq.a}</p>
             </div>
           ))}
@@ -51,12 +51,12 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <h2 className="text-3xl font-extrabold text-slate-900">Specialized In</h2>
+        <h2 className="text-3xl font-extrabold text-brand-plum">Specialized In</h2>
         <ul className="mt-6 flex flex-wrap gap-3">
           {services.map((s) => (
             <li
               key={s.slug}
-              className="rounded-full bg-teal-50 px-4 py-2 text-sm font-medium text-teal-700"
+              className="rounded-full bg-brand-teal/10 px-4 py-2 text-sm font-medium text-brand-teal"
             >
               {s.name}
             </li>

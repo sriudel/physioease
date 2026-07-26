@@ -21,8 +21,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-blue-700">
-          <Activity className="h-6 w-6 text-teal-600" />
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-brand-blue">
+          <Activity className="h-6 w-6 text-brand-teal" />
           PhysioEase
         </Link>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-600 transition hover:text-blue-700"
+              className="text-sm font-medium text-slate-600 transition hover:text-brand-blue"
             >
               {link.label}
             </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <button
             onClick={() => openBooking()}
-            className="rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800"
+            className="rounded-full bg-brand-mint px-5 py-2.5 text-sm font-semibold text-brand-navy shadow-sm transition hover:bg-brand-mint-dark"
           >
             Book Appointment
           </button>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-slate-600 hover:text-blue-700"
+                className="text-sm font-medium text-slate-600 hover:text-brand-blue"
               >
                 {link.label}
               </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
                 setMobileOpen(false);
                 openBooking();
               }}
-              className="mt-2 rounded-full bg-blue-700 px-5 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-2 rounded-full bg-brand-mint px-5 py-2.5 text-center text-sm font-semibold text-brand-navy"
             >
               Book Appointment
             </button>

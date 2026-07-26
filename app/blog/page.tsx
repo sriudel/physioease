@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h1 className="text-4xl font-extrabold text-slate-900">Blog</h1>
+      <h1 className="text-4xl font-extrabold text-brand-plum">Blog</h1>
       <p className="mt-3 max-w-2xl text-slate-500">
         Recovery tips, explainers, and insights from our physiotherapists.
       </p>

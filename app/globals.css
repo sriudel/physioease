@@ -10,6 +10,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand palette matched to ClinicMaster (clinicmaster.com) so the
+     handoff to their booking system doesn't feel like a different site. */
+  --color-brand-mint: #22c399;
+  --color-brand-mint-dark: #1aab84;
+  --color-brand-teal: #178f90;
+  --color-brand-blue: #0f6ea8;
+  --color-brand-blue-dark: #0c5c8c;
+  --color-brand-plum: #5e3869;
+  --color-brand-navy: #2c1939;
+  --color-brand-bg: #eaf2ff;
 }
 
 @media (prefers-color-scheme: dark) {

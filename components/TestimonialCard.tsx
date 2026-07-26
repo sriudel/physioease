@@ -15,7 +15,7 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
       </div>
       <p className="mt-4 text-sm text-slate-600">&ldquo;{testimonial.quote}&rdquo;</p>
       <div className="mt-4">
-        <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
+        <p className="text-sm font-semibold text-brand-plum">{testimonial.name}</p>
         <p className="text-xs text-slate-400">
           {testimonial.location} · via {testimonial.source}
         </p>

@@ -81,7 +81,7 @@ export default function BookingModal() {
               onClick={() =>
                 setStep(step === "details" ? "datetime" : "service")
               }
-              className="flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900"
+              className="flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-brand-plum"
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </button>
@@ -95,7 +95,7 @@ export default function BookingModal() {
 
         {step === "service" && (
           <div className="mt-2">
-            <h2 className="text-xl font-bold text-slate-900">Book Your Appointment</h2>
+            <h2 className="text-xl font-bold text-brand-plum">Book Your Appointment</h2>
             <p className="mt-1 text-sm text-slate-500">Choose the service you need help with.</p>
             <div className="mt-5 space-y-2">
               {services.map((s) => (
@@ -105,7 +105,7 @@ export default function BookingModal() {
                     setServiceSlug(s.slug);
                     setStep("datetime");
                   }}
-                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-left text-sm font-medium text-slate-700 transition hover:border-blue-600 hover:bg-blue-50"
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-left text-sm font-medium text-slate-700 transition hover:border-brand-blue hover:bg-brand-blue/10"
                 >
                   {s.name}
                 </button>
@@ -116,7 +116,7 @@ export default function BookingModal() {
 
         {step === "datetime" && (
           <div className="mt-2">
-            <h2 className="text-xl font-bold text-slate-900">Pick a Date &amp; Time</h2>
+            <h2 className="text-xl font-bold text-brand-plum">Pick a Date &amp; Time</h2>
             {selectedService && (
               <p className="mt-1 text-sm text-slate-500">
                 For <span className="font-medium text-slate-700">{selectedService.name}</span>
@@ -133,8 +133,8 @@ export default function BookingModal() {
                   }}
                   className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                     date === d
-                      ? "border-blue-700 bg-blue-700 text-white"
-                      : "border-slate-200 text-slate-600 hover:border-blue-400"
+                      ? "border-brand-mint bg-brand-mint text-brand-navy"
+                      : "border-slate-200 text-slate-600 hover:border-brand-blue/50"
                   }`}
                 >
                   {d}
@@ -155,8 +155,8 @@ export default function BookingModal() {
                         !slot.available
                           ? "cursor-not-allowed border-slate-100 text-slate-300 line-through"
                           : time === slot.time
-                          ? "border-blue-700 bg-blue-700 text-white"
-                          : "border-slate-200 text-slate-600 hover:border-blue-400"
+                          ? "border-brand-mint bg-brand-mint text-brand-navy"
+                          : "border-slate-200 text-slate-600 hover:border-brand-blue/50"
                       }`}
                     >
                       {slot.time}
@@ -169,7 +169,7 @@ export default function BookingModal() {
             <button
               disabled={!date || !time}
               onClick={() => setStep("details")}
-              className="mt-6 w-full rounded-full bg-blue-700 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
+              className="mt-6 w-full rounded-full bg-brand-mint py-3 text-sm font-semibold text-brand-navy transition disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
             >
               Continue
             </button>
@@ -178,7 +178,7 @@ export default function BookingModal() {
 
         {step === "details" && (
           <div className="mt-2">
-            <h2 className="text-xl font-bold text-slate-900">Your Details</h2>
+            <h2 className="text-xl font-bold text-brand-plum">Your Details</h2>
             <p className="mt-1 text-sm text-slate-500">
               {selectedService?.name} · {date} at {time}
             </p>
@@ -190,7 +190,7 @@ export default function BookingModal() {
                   id="booking-name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
                   placeholder="Jane Doe"
                 />
                 {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
@@ -201,7 +201,7 @@ export default function BookingModal() {
                   id="booking-email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
                   placeholder="jane@example.com"
                 />
                 {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
@@ -212,7 +212,7 @@ export default function BookingModal() {
                   id="booking-phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -223,7 +223,7 @@ export default function BookingModal() {
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   rows={3}
-                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
                   placeholder="Anything we should know before your appointment?"
                 />
               </div>
@@ -231,7 +231,7 @@ export default function BookingModal() {
 
             <button
               onClick={handleConfirmDetails}
-              className="mt-6 w-full rounded-full bg-blue-700 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+              className="mt-6 w-full rounded-full bg-brand-mint py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-mint-dark"
             >
               Confirm Booking
             </button>
@@ -240,10 +240,10 @@ export default function BookingModal() {
 
         {step === "confirmed" && (
           <div className="mt-4 text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-teal/15 text-brand-teal">
               <Check className="h-8 w-8" />
             </div>
-            <h2 className="mt-4 text-xl font-bold text-slate-900">You&apos;re booked!</h2>
+            <h2 className="mt-4 text-xl font-bold text-brand-plum">You&apos;re booked!</h2>
             <p className="mt-2 text-sm text-slate-500">
               {selectedService?.name} · {date} at {time}
             </p>
@@ -255,7 +255,7 @@ export default function BookingModal() {
             </p>
             <button
               onClick={closeBooking}
-              className="mt-6 w-full rounded-full bg-blue-700 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+              className="mt-6 w-full rounded-full bg-brand-mint py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-mint-dark"
             >
               Done
             </button>

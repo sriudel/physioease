@@ -23,11 +23,11 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-teal-100 bg-teal-50 p-8 text-center">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+      <div className="rounded-2xl border border-brand-teal/20 bg-brand-teal/10 p-8 text-center">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-teal/15 text-brand-teal">
           <CheckCircle2 className="h-7 w-7" />
         </div>
-        <h3 className="mt-4 text-lg font-bold text-slate-900">Message sent!</h3>
+        <h3 className="mt-4 text-lg font-bold text-brand-plum">Message sent!</h3>
         <p className="mt-2 text-sm text-slate-600">
           Thanks, {name.split(" ")[0]} — we&apos;ll get back to you at {email} within one
           business day.
@@ -39,7 +39,7 @@ export default function ContactForm() {
             setEmail("");
             setMessage("");
           }}
-          className="mt-5 text-sm font-semibold text-blue-700 hover:underline"
+          className="mt-5 text-sm font-semibold text-brand-blue hover:underline"
         >
           Send another message
         </button>
@@ -55,7 +55,7 @@ export default function ContactForm() {
           id="contact-name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
           placeholder="Jane Doe"
         />
         {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
@@ -66,7 +66,7 @@ export default function ContactForm() {
           id="contact-email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
           placeholder="jane@example.com"
         />
         {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
@@ -78,14 +78,14 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
-          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-600 focus:outline-none"
+          className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-blue focus:outline-none"
           placeholder="How can we help?"
         />
         {errors.message && <p className="mt-1 text-xs text-red-600">{errors.message}</p>}
       </div>
       <button
         type="submit"
-        className="w-full rounded-full bg-blue-700 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+        className="w-full rounded-full bg-brand-mint py-3 text-sm font-semibold text-brand-navy transition hover:bg-brand-mint-dark"
       >
         Send Message
       </button>

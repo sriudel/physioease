@@ -25,7 +25,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             year: "numeric",
           })}
         </p>
-        <h3 className="mt-1 text-base font-bold text-slate-900 group-hover:text-blue-700">
+        <h3 className="mt-1 text-base font-bold text-brand-plum group-hover:text-brand-blue">
           {post.title}
         </h3>
         <p className="mt-2 text-sm text-slate-500">{post.excerpt}</p>

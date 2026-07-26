@@ -15,15 +15,15 @@ export default function TeamCard({ member }: { member: TeamMember }) {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
-        <p className="text-sm font-medium text-teal-700">{member.title}</p>
+        <h3 className="text-lg font-bold text-brand-plum">{member.name}</h3>
+        <p className="text-sm font-medium text-brand-teal">{member.title}</p>
         <p className="mt-1 text-xs text-slate-400">{member.credentials}</p>
         <p className="mt-3 text-sm text-slate-500">{member.bio}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {member.specialties.map((s) => (
             <span
               key={s}
-              className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700"
+              className="rounded-full bg-brand-blue/10 px-3 py-1 text-xs font-medium text-brand-blue"
             >
               {s}
             </span>

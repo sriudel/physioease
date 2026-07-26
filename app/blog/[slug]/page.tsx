@@ -33,7 +33,7 @@ export default async function BlogPostPage({
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <Link href="/blog" className="flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-slate-900">
+      <Link href="/blog" className="flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-brand-plum">
         <ChevronLeft className="h-4 w-4" /> Back to blog
       </Link>
 
@@ -55,7 +55,7 @@ export default async function BlogPostPage({
         })}{" "}
         · By {post.author}
       </p>
-      <h1 className="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">{post.title}</h1>
+      <h1 className="mt-2 text-3xl font-extrabold text-brand-plum sm:text-4xl">{post.title}</h1>
 
       <div className="mt-6 space-y-4 text-slate-600">
         {post.content.map((paragraph, i) => (

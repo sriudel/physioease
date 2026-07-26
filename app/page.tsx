@@ -15,8 +15,8 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <div className="flex items-end justify-between">
-          <h2 className="text-3xl font-extrabold text-slate-900">Our Services</h2>
-          <Link href="/services" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+          <h2 className="text-3xl font-extrabold text-brand-plum">Our Services</h2>
+          <Link href="/services" className="border-b border-brand-plum text-sm font-semibold text-brand-plum">
             Explore services
           </Link>
         </div>
@@ -31,8 +31,8 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <div className="flex items-end justify-between">
-          <h2 className="text-3xl font-extrabold text-slate-900">What Our Patients Say</h2>
-          <Link href="/testimonials" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+          <h2 className="text-3xl font-extrabold text-brand-plum">What Our Patients Say</h2>
+          <Link href="/testimonials" className="border-b border-brand-plum text-sm font-semibold text-brand-plum">
             Read more
           </Link>
         </div>
@@ -43,11 +43,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20">
+      <section className="bg-brand-bg py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex items-end justify-between">
-            <h2 className="text-3xl font-extrabold text-slate-900">Blog</h2>
-            <Link href="/blog" className="border-b border-slate-900 text-sm font-semibold text-slate-900">
+            <h2 className="text-3xl font-extrabold text-brand-plum">Blog</h2>
+            <Link href="/blog" className="border-b border-brand-plum text-sm font-semibold text-brand-plum">
               Explore blog
             </Link>
           </div>

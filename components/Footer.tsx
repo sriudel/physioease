@@ -4,11 +4,11 @@ import { FacebookIcon, InstagramIcon, XIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-slate-100 bg-slate-50">
+    <footer className="mt-auto border-t border-slate-100 bg-brand-bg">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 text-lg font-bold text-blue-700">
-            <Activity className="h-6 w-6 text-teal-600" />
+          <div className="flex items-center gap-2 text-lg font-bold text-brand-blue">
+            <Activity className="h-6 w-6 text-brand-teal" />
             PhysioEase
           </div>
           <p className="mt-3 text-sm text-slate-500">
@@ -25,19 +25,19 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold text-slate-800">Quick Links</h3>
           <ul className="mt-3 space-y-2 text-sm text-slate-500">
-            <li><Link href="/services" className="hover:text-blue-700">Services</Link></li>
-            <li><Link href="/team" className="hover:text-blue-700">Our Team</Link></li>
-            <li><Link href="/testimonials" className="hover:text-blue-700">Testimonials</Link></li>
-            <li><Link href="/blog" className="hover:text-blue-700">Blog</Link></li>
+            <li><Link href="/services" className="hover:text-brand-blue">Services</Link></li>
+            <li><Link href="/team" className="hover:text-brand-blue">Our Team</Link></li>
+            <li><Link href="/testimonials" className="hover:text-brand-blue">Testimonials</Link></li>
+            <li><Link href="/blog" className="hover:text-brand-blue">Blog</Link></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold text-slate-800">Company</h3>
           <ul className="mt-3 space-y-2 text-sm text-slate-500">
-            <li><Link href="/how-it-works" className="hover:text-blue-700">How It Works</Link></li>
-            <li><Link href="/contact" className="hover:text-blue-700">Contact</Link></li>
-            <li><Link href="/#faq" className="hover:text-blue-700">FAQ</Link></li>
+            <li><Link href="/how-it-works" className="hover:text-brand-blue">How It Works</Link></li>
+            <li><Link href="/contact" className="hover:text-brand-blue">Contact</Link></li>
+            <li><Link href="/#faq" className="hover:text-brand-blue">FAQ</Link></li>
           </ul>
         </div>
 

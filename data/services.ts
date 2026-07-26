@@ -27,6 +27,8 @@ export const services: Service[] = [
       "Return to daily activities safely",
     ],
     icon: "activity",
+    image: "/images/service-neurological-rehabilitation.jpg",
+    imagePosition: "center 65%",
   },
   {
     slug: "brain-injury-complex-rehabilitation",
@@ -52,6 +54,7 @@ export const services: Service[] = [
       "Return to daily activities safely",
     ],
     icon: "brain",
+    image: "/images/service-brain-injury.jpg",
   },
   {
     slug: "musculoskeletal-rehabilitation",
@@ -77,6 +80,7 @@ export const services: Service[] = [
       "Return to daily activities safely",
     ],
     icon: "bone",
+    image: "/images/service-musculoskeletal.jpg",
   },
   {
     slug: "virtual-musculoskeletal-program",
@@ -209,6 +213,8 @@ export const services: Service[] = [
       },
     ],
     icon: "route",
+    image: "/images/service-virtual-msk.jpg",
+    imagePosition: "center 70%",
   },
   {
     slug: "aquatic-therapy",
@@ -265,6 +271,7 @@ export const services: Service[] = [
       "Safe environment for rehabilitation and exercise",
     ],
     icon: "waves",
+    image: "/images/service-aquatic-therapy.jpg",
   },
 ];
 

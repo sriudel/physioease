@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h1 className="text-4xl font-extrabold text-slate-900">What Our Patients Say</h1>
+      <h1 className="text-4xl font-extrabold text-brand-plum">What Our Patients Say</h1>
       <p className="mt-3 max-w-2xl text-slate-500">
         Real feedback from people who started their recovery with PhysioEase.
       </p>
